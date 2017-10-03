@@ -1,0 +1,20 @@
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-family: 'PT Sans', Arial, Helvetica, sans-serif;
+}
+
+body {
+	margin: 0;
+}
+
+ul {
+	@include listReset();
+}
+
+.container {
+	max-width: 1600px;
+	width: 100%;
+}

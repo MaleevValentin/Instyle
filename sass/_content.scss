@@ -1,0 +1,259 @@
+.wrapper {
+	position: relative;
+}
+
+.main-slider .owl-nav .owl-prev {
+	position: absolute;
+	top: 50%;
+	left: 2%;
+	transform: translate(0, -50%);
+	font-size: 0;
+	width: 40px;
+	height: 40px;
+	background-image: url("../images/left-arrow.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	&:hover {
+		background-color: transparent;
+		opacity: 0.6;
+	}
+}
+
+.main-slider .owl-nav .owl-next {
+	position: absolute;
+	top: 50%;
+	right: 2%;
+	transform: translate(0, -50%);
+	font-size: 0;
+	width: 40px;
+	height: 40px;
+	background-image: url("../images/right-arrow.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	&:hover {
+		background-color: transparent;
+		opacity: 0.6;
+	}
+}
+
+.owl-nav {
+	margin-top: 0;
+}
+
+.main-slider-item {
+	position: relative;
+	height: 700px;
+	background-image: url(../images/catalog_1.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	.slider-title {
+		@include absoluteAlign();
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		max-width: 1170px;
+		color: $main-color;
+		font-size: 16px;
+		&-text {
+			font-size: 38px;
+			text-transform: uppercase;
+			white-space: pre-line;
+		}
+	}
+}
+
+.description {
+	padding: 16px 0;
+	background-color: $main-color-inverse;
+	color: $main-color;
+	.description__text {
+		padding: 50px 25px;
+		text-align: justify;
+		font-size: 18px;
+		&__content {
+			margin: 0;
+		}
+		&__content:first-child {
+			margin-bottom: 40px;
+		}
+	}
+}
+
+.models {
+	padding-bottom: 35px;
+	background-color: $main-color-inverse;
+	&-box {
+		position: relative;
+		&__image {
+			max-width: 100%;
+			height: auto;
+		}
+	}
+	&__text {
+		@include absoluteAlign();
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		color: $main-color;
+		text-decoration: none;
+		font-size: 18px;
+		&:hover {
+			text-decoration: none;
+			color: #FFF5AD;
+			transform: scale(1.2);
+			transition: .3s;
+		}
+		&__title {
+			font-size: 36px;
+			text-transform: uppercase;
+		}
+	}
+}
+
+.btn-box {
+	width: 215px;
+	border: 2px solid $main-color;
+	margin: 30px auto 0;
+	text-align: center;
+	background: transparent;
+	& a {
+		display: block;
+		padding: 10px 20px;
+		font-size: 16px;
+		vertical-align: middle;
+		color: $main-color;
+		text-transform: uppercase;
+		text-decoration: none;
+	}
+	& a:hover {
+		background-color: $main-color;
+		text-decoration: none;
+		color: $main-color-inverse;
+		font-weight: 600;
+	}
+	& a:focus {
+		outline: none;
+		background-color: $main-color;
+		text-decoration: none;
+		color: $main-color-inverse;
+	}
+}
+
+.map {
+	position: relative;
+	.inner-box {
+		position: absolute;
+		left: 50%;
+		bottom: 38px;
+		width: 100%;
+		text-align: center;
+		transform: translate(-50%, 0);
+		color: $main-color;
+		font-size: 36px;
+	}
+}
+
+.main__partners {
+	padding: 54px 0 18px;
+	.inner__partners {
+		@include flexAlign();
+		flex-wrap: wrap;
+		margin: 0 -15px;
+		.partners__logo {
+			margin: 0 12px 40px;
+		}
+	}
+}
+
+@media screen and (min-width: 480px) {
+	.main-slider {
+		.slider-title {
+			font-size: 24px;
+			&-text {
+				font-size: 72px;
+				text-transform: uppercase;
+			}
+		}
+	}
+
+	.models {
+		&-box {
+			float: left;
+			width: 50%;
+		}
+	}
+
+	.container {
+		padding: 0 25px;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.main-slider {
+		.slider-title {
+			font-size: 36px;
+			&-text {
+				font-size: 120px;
+				text-transform: uppercase;
+			}
+		}
+	}
+
+	.video {
+		height: 495px;
+	}
+
+	.models {
+		&-box {
+			float: left;
+			width: 33%;
+		}
+	}
+
+	.container {
+		padding: 0 42px;
+	}
+}
+
+@media screen and (min-width: 992px) {
+	.video {
+		height: 635px;
+	}
+
+	.container {
+		padding: 0 60px;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.description__text {
+		float: left;
+		width: 40%;
+		padding-top: 0 !important;
+	}
+	.main__video {
+		float: left;
+		width: 60%;
+		.video {
+			height: 640px;
+		}
+	}
+
+	.models {
+		&-box {
+			float: left;
+			width: 25%;
+		}
+	}
+	.container {
+		padding: 0 125px;
+	}
+
+	.main-slider-item {
+		height: 918px;
+	}
+}

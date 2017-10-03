@@ -1,0 +1,78 @@
+.footer {
+	padding: 60px 0 36px 0;
+	background-color: $main-color-inverse;
+	color: $main-color;
+	&__form__title {
+		margin: 0 0 20px;
+		font-size: 30px;
+		font-weight: normal;
+	}
+	&__form {
+		max-width: 440px;
+		margin-bottom: 45px;
+		font-size: 0;
+		position: relative;
+		&__email {
+			width: 100%;
+			height: 30px;
+			background-color: $main-color-inverse;
+			border: none;
+			border-bottom: 1px solid $main-color;
+			font-size: 18px;
+		}
+		&__email:focus {
+			outline: none;
+		}
+		&__btn {
+			position: absolute;
+			right: 0;
+			background-color: transparent;
+			border: none;
+			font-size: 18px;
+			text-transform: uppercase;
+		}
+	}
+	&__copy {
+		margin-bottom: 0;
+		font-size: 18px;
+		clear: both;
+	}
+	.social {
+		margin-bottom: 38px;
+		&__item {
+			display: inline-block;
+			margin-right: 10px;
+			&__link {
+				display: block;
+				width: 30px;
+				height: 29px;
+				&:hover {
+					opacity: .5;
+					transition: .3s;
+				}
+			}
+			.instagram {
+				background: url('../images/instagram.png') no-repeat center;
+			}
+			.facebook {
+				background: url('../images/facebook.png') no-repeat center;
+			}
+			.youtube {
+				width: 38px;
+				background: url('../images/youtube.png') no-repeat center;
+			}
+		}
+		&__item:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+@media screen and (min-width: 750px) {
+	.social {
+		float: right;
+	}
+	.footer__subscribe {
+		float: left;
+	}
+}	
